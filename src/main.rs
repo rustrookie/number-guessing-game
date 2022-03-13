@@ -29,4 +29,6 @@ fn main(){
         Ok(num) => num,
         Err(_) => 101,
     };
+
+    let secret_number = rand::thread_rng().gen_range(_lower_limit.._higher_limit);
 }
