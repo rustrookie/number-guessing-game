@@ -15,4 +15,16 @@ fn main(){
         Ok(num) => num,
         Err(_) => 1,
     };
+
+    let mut _higher_limit = String::new();
+    
+    println!("Choose the higher limit (number > _lower_limit + 1): ");
+
+    io::stdin().read_line(&mut _higher_limit)
+    .expect("Failed to read value");
+
+    let _higher_limit: u32 = match _higher_limit.trim().parse() {
+        Ok(num) => num,
+        Err(_) => 101,
+    };
 }
